@@ -1,6 +1,6 @@
 void main() {
 
-//  print(assert(2 + 3 == 5));
+  // 산수연산자
   assert(2 + 3 == 5);
   assert(2 - 3 == -1);
   assert(2 * 3 == 6);
@@ -13,22 +13,25 @@ void main() {
   //  연산자
   // null 검사
   // ??
-  // 나누기 (정수형 반환)
-  // -/
+  var e;
+  var v = 'var';
+  print(e ?? v); // e가 null이면 val 사용, val가 null 이면 e 사용
+  //  exp ?? otherExp
+  //  ((x) => x == null ? otherExp : x)(exp)
 
   // 타입 검증 연산자
   // as 타입 캐스팅
   // is 특정 타입여부 확인 일치하면 true , 자바스크립트의 typeof 와 유사
   // is! 특정 타입여부 확인 일치하면 false
-  var emp;
-  String Person;
+  var emp ;
+
   // is 의 경우 emp가 null이거나 Person이 아니면 아무것도 하지않습니다.
-  if (emp is Person) {
+  if (emp is String) {
     // Type check
-    emp.firstName = 'Bob';
+//    emp.firstName = 'Bob';
   }
   // as는 exception을 발생합니다.
-  (emp as Person).firstName = 'Bob';
+//  (emp as String).firstName = 'Bob';
 
 
   // 할당 연산자
@@ -77,14 +80,16 @@ void main() {
   //  // 계단식 (..)을 사용하면 동일한 객체에 대해 일련의 작업을 수행 할 수 있습니다.
   //  // 함수 호출 외에도 동일한 객체의 필드에 액세스 할 수 있습니다.
   //  // 이것은 종종 임시 변수를 만드는 단계를 생략하고보다 유동적 인 코드를 작성할 수 있도록합니다.
-  final addressBook = (AddressBookBuilder()
-    ..name = 'jenny'
-    ..email = 'jenny@example.com'
-    ..phone = (PhoneNumberBuilder()
-      ..number = '415-555-0100'
-      ..label = 'home')
-        .build())
-      .build();
+  // Cascade 연산자는 메소드체이닝처럼 자신의 스스로를 계속 불러내 실행하는 연산자입니다.
+//  var button = querySelector('#confirm');
+//  button.text = 'Confirm';
+//  button.classes.add('important');
+//  button.onClick.listen((e) => window.alert('Confirmed!'));
+// 위의 예문과 같음
+//  querySelector('#confirm') // Get an object.
+//    ..text = 'Confirm' // Use its members.
+//    ..classes.add('important')
+//    ..onClick.listen((e) => window.alert('Confirmed!'));
 
   // 기타 연산자
   // () 함수 호출
