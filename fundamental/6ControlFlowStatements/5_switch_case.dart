@@ -20,8 +20,9 @@ void main() {
     default:
       executeUnknown();
   }
-  //
-  var command = 'CLOSED';
+
+
+  command = 'CLOSED';
   switch (command) {
     case 'CLOSED': // Empty case falls through.
     case 'NOW_CLOSED':
@@ -31,10 +32,10 @@ void main() {
   }
 
   // break 생략하면 에러
-  var command = 'OPEN';
+  command = 'OPEN';
   switch (command) {
-    case 'OPEN':
-      executeOpen();
+    //case 'OPEN':
+      //executeOpen();
   // ERROR: Missing break
 
     case 'CLOSED':
@@ -44,7 +45,7 @@ void main() {
 
 
   // label을 사용하여 흐름을 제어할 수 있다.
-  var command = 'CLOSED';
+  command = 'CLOSED';
   switch (command) {
     case 'CLOSED':
       executeClosed();
@@ -57,4 +58,25 @@ void main() {
       executeNowClosed();
       break;
   }
+}
+
+void executeUnknown() {
+}
+
+void executeNowClosed() {
+}
+
+void executeDenied() {
+}
+
+void executeOpen() {
+}
+
+void executePending() {
+}
+
+void executeClosed() {
+}
+
+void executeApproved() {
 }

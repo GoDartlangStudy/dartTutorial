@@ -1,0 +1,6 @@
+This example uses two transformers. First it uses utf8.decoder to transform the stream of integers into a stream of strings. Then it uses a LineSplitter to transform the stream of strings into a stream of separate lines. These transformers are from the dart:convert library (see the dart:convert section).
+
+Handling errors and completion
+How you specify error and completion handling code depends on whether you use an asynchronous for loop (await for) or the Stream API.
+
+If you use an asynchronous for loop, then use try-catch to handle errors. Code that executes after the stream is closed goes after the asynchronous for loop.
